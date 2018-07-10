@@ -194,9 +194,9 @@ header.masthead h2 {
     font-size: 4.75em;
     line-height: 4rem;
   }
-  header.masthead h2 {
-    font-size: 1.75em;
-  }
+    header.masthead h2 {
+        font-size: 2.5em;
+    }
 }
 
 .floating-label-form-group {
