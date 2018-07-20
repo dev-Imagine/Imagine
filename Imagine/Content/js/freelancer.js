@@ -3,7 +3,8 @@
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      if (location.path
+          .replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
@@ -48,18 +49,6 @@
   navbarCollapse();
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
-
-  // Modal popup$(function () {
-  $('.Servicios-item').magnificPopup({
-    type: 'inline',
-    preloader: false,
-    focus: '#username',
-    modal: true
-  });
-  $(document).on('click', '.Servicios-modal-dismiss', function(e) {
-    e.preventDefault();
-    $.magnificPopup.close();
-  });
 
   // Floating label headings for the contact form
   $(function() {

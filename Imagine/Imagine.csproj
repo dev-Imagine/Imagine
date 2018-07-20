@@ -187,16 +187,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\scss\freelancer.scss" />
-    <Content Include="Content\scss\_bootstrap-overrides.scss" />
-    <Content Include="Content\scss\_contact.scss" />
-    <Content Include="Content\scss\_footer.scss" />
-    <Content Include="Content\scss\_global.scss" />
-    <Content Include="Content\scss\_masthead.scss" />
-    <Content Include="Content\scss\_mixins.scss" />
-    <Content Include="Content\scss\_navbar.scss" />
-    <Content Include="Content\scss\_portfolio.scss" />
-    <Content Include="Content\scss\_variables.scss" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js.map" />

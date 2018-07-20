@@ -1,5 +1,5 @@
 :root {
-    --ColorPrincipal: #3797ff;
+    --ColorPrincipal: #0055B8;
     --ColorHover: #00448e;
 }
 
@@ -120,7 +120,7 @@ section h2 {
 }
 
     #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-        color: var(--ColorPrincipal);
+        color: #3797ff;
     }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
@@ -128,7 +128,7 @@ section h2 {
 }
 
     #mainNav .navbar-nav li.nav-item a.nav-link.active {
-        color: var(--ColorPrincipal);
+        background-color: var(--ColorPrincipal);
     }
 
 #mainNav .navbar-toggler {
@@ -318,5 +318,5 @@ a:focus, a:hover, a:active {
 
 .p-detalle-servicio {
     font-family: Montserrat;
-    color: #828282;
+    color: #595959;
 }
