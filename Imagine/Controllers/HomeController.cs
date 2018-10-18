@@ -10,13 +10,13 @@ namespace Imagine.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string exito = null)
         {
 
             return View();
         }
         [HttpPost]
-        public ActionResult EnviarEmailContacto(string Nombre, string Email, string Mensaje)
+        public JsonResult EnviarEmailContacto(string Nombre, string Email, string Mensaje)
         {
             try
             {
@@ -43,11 +43,11 @@ namespace Imagine.Controllers
                 {
                     smtp.Send(message);
                 }
-                return RedirectToAction("Index", "Home");
+                return Json(true);
             }
             catch (Exception)
             {
-                return RedirectToAction("Index", "Home");
+                return Json(false);
             }
         }
     }

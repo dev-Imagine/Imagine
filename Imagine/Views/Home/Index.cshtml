@@ -4,7 +4,7 @@
 <!-- Nav -->
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="~/Content/img/centro_icono.png" style="width: 40px;margin-bottom: 5px;" alt="dev-imagine imagine"/> IMAGINE</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="~/Content/img/centro_icono.png" style="width: 40px;margin-bottom: 5px;" alt="dev-imagine imagine" /> IMAGINE</a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fa fa-bars"></i>
@@ -61,7 +61,7 @@
                     </div>
                     <br />
                     <hr class="hr-servicios" />
-                    <h3 class="text-center text-uppercase text-secondary mb-0" >
+                    <h3 class="text-center text-uppercase text-secondary mb-0">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger solicitar" onclick="solicitarInfo('Solicito informacion del sistema web de gestión de negocio.')">Solicitar</a>
                     </h3>
                     <br />
@@ -87,7 +87,7 @@
                     </div>
                     <br />
                     <hr class="hr-servicios" />
-                    <h3 class="text-center text-uppercase text-secondary mb-0" >
+                    <h3 class="text-center text-uppercase text-secondary mb-0">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger solicitar" onclick="solicitarInfo('Solicito informacion de la tienda online.')">Solicitar</a>
                     </h3>
                     <br />
@@ -149,7 +149,7 @@
         <hr class="star-dark mb-5">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <form action="@Url.Action("EnviarEmailContacto","Home")" method="post" novalidate="novalidate" autocomplete="off">
+                <form id="frm-contacto" autocomplete="off">
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label for="Nombre">Nombre</label>
@@ -160,7 +160,7 @@
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label for="email">Email</label>
-                            <input class="form-control" id="email" name="Email" type="email" placeholder="Email" required="required" data-validation-required-message="Por favor, ingrese su email.">
+                            <input class="form-control" id="Email" name="Email" type="email" placeholder="Email" required="required" data-validation-required-message="Por favor, ingrese su email.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -184,12 +184,40 @@
     </div>
 </section>
 
+@section scripts{
+    <script>
+    $(document).ready(function () {
 
 
-<script>
+        $('#frm-contacto').submit(function (event) {
+            var url = "@Url.Action("EnviarEmailContacto", "Home")";
+            var Nombre = document.getElementById("Nombre").value;
+            var Email = document.getElementById("Email").value;
+            var Mensaje = document.getElementById("Mensaje").value;
+            var data = { Email: Email, Nombre: Nombre, Mensaje: Mensaje  };
+            $.post(url, data).done(function (data) {
+                if (data) {
+                    location.href = '#page-top';
+                    document.getElementById("Nombre").value = "";
+                    document.getElementById("Email").value = "";
+                    document.getElementById("Mensaje").value = "";
+                    swal('Email enviado', 'Gracias por comunicarte con nosotros. \n Pronto nos pondremos en contacto vía email.', 'success');
+                }
+                else {
+                    swal('Error', 'No hemos podido recibir tu email, por favor asegurate de que el email este correcto.', 'error');
+                }
+            });
+            return false;
+        });
+
+
+    });
+
     function solicitarInfo(texto) {
+        swal("exito", "asdasd", "success");
         document.getElementById("Mensaje").value = texto;
         location.href = "#contact";
         document.getElementById("Nombre").focus();
     }
-</script>
+    </script>
+}
