@@ -149,6 +149,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\sw-medida.jpg" />
+    <Content Include="Content\img\sw-tienda.jpg" />
+    <Content Include="Content\img\sw-gestion.jpg" />
+    <Content Include="Content\simple_bootstrap.css" />
     <Content Include="Content\css\freelancer.css" />
     <Content Include="Content\css\freelancer.min.css" />
     <Content Include="Content\img\centro_icono.png" />

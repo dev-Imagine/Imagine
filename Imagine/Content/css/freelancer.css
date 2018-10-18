@@ -200,8 +200,8 @@ header.masthead h2 {
 }
 
 .floating-label-form-group {
-  position: relative;
-  border-bottom: 1px solid #e9ecef;
+    position: relative;
+    border-bottom: 1px solid #b5b5b5;
 }
 
 .floating-label-form-group input,
@@ -320,3 +320,14 @@ a:focus, a:hover, a:active {
     font-family: Montserrat;
     color: #595959;
 }
+.solicitar {
+    color: #fff !important;
+    font-size: 25px;
+    cursor: pointer;
+    border: 2px solid #2c3e50;
+    background-color: #2c3e50;
+}
+    .solicitar:hover {
+        color: #2c3e50 !important;
+        background-color: #fff;
+    }
