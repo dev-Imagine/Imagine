@@ -54,10 +54,15 @@
                         <p><strong class="p-detalle-servicio" style="color:#0061cb">Software web de gestión de negocio</strong></p>
                         <p class="p-detalle-servicio">&bull; Gestion de ventas</p>
                         <p class="p-detalle-servicio">&bull; Gestion de productos</p>
+                        <p class="p-detalle-servicio">&bull; Gestion de clientes</p>
+                        <p class="p-detalle-servicio">&bull; Gestion de proveedores</p>
+                        <p class="p-detalle-servicio">&bull; USD en tiempo real o ingreso manual</p>
+                        <p class="p-detalle-servicio">&bull; Tipos de usuarios con distintos permisos (Usuario, SuperUsuario)</p>
                         <p class="p-detalle-servicio">&bull; Cuenta corriente</p>
                         <p class="p-detalle-servicio">&bull; Control de stock</p>
                         <p class="p-detalle-servicio">&bull; Reportes estadísticos</p>
-                        <p class="p-detalle-servicio">&bull; Diseño responsive</p>
+                        <p class="p-detalle-servicio">&bull; Diseño responsive, adaptado a moviles</p>
+                        <p class="p-detalle-servicio">&bull; Servicio técnico las 24hs</p>
                     </div>
                     <br />
                     <hr class="hr-servicios" />
@@ -79,11 +84,12 @@
                     <div>
                         <p><strong class="p-detalle-servicio" style="color:#0061cb">Tienda online</strong></p>
                         <p class="p-detalle-servicio">&bull; Gestion de ventas</p>
-                        <p class="p-detalle-servicio">&bull; Gestion de productos</p>
+                        <p class="p-detalle-servicio">&bull; Gestion de productos con visualizacion de una o mas imagenes</p>
                         <p class="p-detalle-servicio">&bull; Control de stock</p>
                         <p class="p-detalle-servicio">&bull; Implementacion con mercado pago</p>
                         <p class="p-detalle-servicio">&bull; Reportes estadísticos</p>
-                        <p class="p-detalle-servicio">&bull; Diseño responsive</p>
+                        <p class="p-detalle-servicio">&bull; Diseño responsive, adaptado a moviles</p>
+                        <p class="p-detalle-servicio">&bull; Servicio técnico las 24hs</p>
                     </div>
                     <br />
                     <hr class="hr-servicios" />
@@ -107,7 +113,7 @@
                         <p><strong class="p-detalle-servicio" style="color:#0061cb">Desarrollo a medida</strong></p>
                         <p class="p-detalle-servicio">&bull; Funcionalidades adaptadas al usuario</p>
                         <p class="p-detalle-servicio">&bull; Diseño web personalizado</p>
-                        <p class="p-detalle-servicio">&bull; Diseño responsive</p>
+                        <p class="p-detalle-servicio">&bull; Diseño responsive, adaptado a moviles</p>
                         <p class="p-detalle-servicio">&bull; Mantenimiento gratuito</p>
                         <p class="p-detalle-servicio">&bull; Dominio web incluido</p>
                         <p class="p-detalle-servicio">&bull; Servicio técnico las 24hs</p>
@@ -214,7 +220,7 @@
     });
 
     function solicitarInfo(texto) {
-        swal("exito", "asdasd", "success");
+        swal("exito", texto, "success");
         document.getElementById("Mensaje").value = texto;
         location.href = "#contact";
         document.getElementById("Nombre").focus();
